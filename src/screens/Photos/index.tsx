@@ -1,25 +1,39 @@
-import React, { FC } from 'react';
-import { Text, View } from 'react-native';
-import styled from 'styled-components/native';
+import React, { FC } from 'react'
+import {Text, View, ScrollView, StyleSheet} from 'react-native'
+import PhotoItem from "../../Components/photoItem";
+import {galleryStyles} from "../../constans/Styles";
+import Header from "../../Components/header";
+import Constants from "expo-constants";
 
-import Colors from '../../constans/Colors';
+const Gallery = () => {
 
-const WelcomeText = styled.Text`
-    margin: 120px 20px;
-    font-size: 16px;
-    color: ${Colors.black};
-`;
+    const haha = "hahahahhahahahahahahhahahahahaahhahahahahahahahhahahahahahahahhahahahahahahh";
 
-interface IWelcomeProps {
-    myProps: string;
-}
-
-const Photos: FC<IWelcomeProps> = props => {
     return (
         <View>
-            <WelcomeText>Welcome {props.myProps}</WelcomeText>
+            <View style={styles.container}>
+                <Header text={'Gallery'}></Header>
+            </View>
+            <ScrollView style={galleryStyles.tileContainer}>
+                <PhotoItem imageLeft={true} tileText={haha} imageSrc={require('../../assets/logo.png')}/>
+                <PhotoItem imageLeft={false} tileText={haha} imageSrc={require('../../assets/logo.png')}/>
+                <PhotoItem imageLeft={true} tileText={haha} imageSrc={require('../../assets/logo.png')}/>
+                <PhotoItem imageLeft={false} tileText={haha} imageSrc={require('../../assets/logo.png')}/>
+                <PhotoItem imageLeft={true} tileText={haha} imageSrc={require('../../assets/logo.png')}/>
+                <PhotoItem imageLeft={false} tileText={haha} imageSrc={require('../../assets/logo.png')}/>
+                <PhotoItem imageLeft={false} tileText={haha} imageSrc={require('../../assets/logo.png')}/>
+                <PhotoItem imageLeft={true} tileText={haha} imageSrc={require('../../assets/logo.png')}/>
+                <PhotoItem imageLeft={true} tileText={haha} imageSrc={require('../../assets/logo.png')}/>
+                
+            </ScrollView>
         </View>
-    );
-};
+    )
+}
 
-export default Photos;
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        marginTop: Constants.statusBarHeight,
+    }
+});
+export default Gallery;
