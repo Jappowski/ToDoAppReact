@@ -50,3 +50,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
     - Home screen
+    
+## 24.05.2020
+
+### changes
+
+    - scroll in gallery
+    - images and text
+    
+### Added
+
+    - Splashscreen
