@@ -56,11 +56,10 @@ export const galleryStyles = StyleSheet.create({
         marginLeft: 15,
     },
     tileContainer: {
-        flex:0,
+        flex:1,
         padding: 10,
         alignContent: 'center',
-        height: "100%",
-        marginTop:"25%"
+        marginTop:1,
     },
     tile: {
         flex:1,

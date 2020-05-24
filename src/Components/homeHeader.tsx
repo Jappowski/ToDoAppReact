@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
-import { Text, View, Image, ImageSourcePropType, ScrollView } from 'react-native';
+import {Text, View, Image, ImageSourcePropType, ScrollView, StyleSheet} from 'react-native';
 import { homeStyles } from '../constans/Styles';
+import Constants from "expo-constants";
 
 interface IHomescreenCompProp  {
     headerText:string;
@@ -19,10 +20,6 @@ const HomescreenComp:FC<IHomescreenCompProp> = ({headerText, image}) => {
                     {headerText}
                 </Text>
             </View>
-            
-
-
-
         </View>
     );
 }
